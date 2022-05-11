@@ -1,0 +1,151 @@
+9mai2022becode
+
+What is meant by virtual machine?
+
+A Virtual Machine (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.
+
+What is a hypervisor?
+A hypervisor, also known as a virtual machine monitor or VMM, is software that creates and runs virtual machines (VMs). A hypervisor allows one host computer to support multiple guest VMs by virtually sharing its resources, such as memory and processing.
+ 
+
+The use of vm ?
+two basic types of virtual machines are process and system VMs.
+
+    A process virtual machine allows you to run a single process as an application on a host machine. An example of a process virtual machine is the Java Virtual Machine (JVM) which allows any system to run Java applications as if they were native to the system.
+    A system virtual machine is a fully virtualized VM designed to be a substitute for a physical machine. It runs on a different host machine by utilizing a hypervisor such as VMware ESXi to access the underlying machine’s resources.
+    
+  Question 1c?  
+    Desktop Virtualization
+    Application Virtualization
+    Server Virtualization
+    Network Virtualization
+    Storage Virtualization
+
+Desktop Virtualization
+
+Desktop virtualization is when the host server can run virtual machines using a hypervisor (a software program). A hypervisor can directly be installed on the host machine or over the operating system (like Windows, Mac, and Linux). Virtualized desktops don’t use the host system’s hard drive; instead, they run on a remote central server. This type of virtualization is useful for development and testing teams who need to develop or test applications on different operating systems.
+Application Virtualization
+
+The process of installing an application on a central server (single computer system) that can virtually be operated on multiple systems is known as application virtualization. For end users, the virtualized application works exactly like a native application installed on a physical machine. With application virtualization, it’s easier for organizations to update, maintain, and fix applications centrally. Admins can control and modify access permissions to the application without logging in to the user’s desktop. Another benefit of application virtualization is portability. It allows users to access virtualized applications even on non-Windows devices, such as iOS or Android. This helps save user’s time invested in application installations and load operations.
+Server Virtualization
+
+Server virtualization is a process of partitioning the resources of a single server into multiple virtual servers. These virtual servers can run as separate machines. Server virtualization allows businesses to run multiple independent OSs (guests or virtual) all with different configurations using a single (host) server. The process also saves the hardware cost involved in keeping a host of physical servers, so businesses can make their server infrastructure more streamlined.
+Network Virtualization
+
+Network virtualization helps manage and monitor the entire computer network as a single administrative entity. Admins can keep a track of various elements of network infrastructure such as routers and switches from a single software-based administrator’s console. Network virtualization helps network optimization for data transfer rates, flexibility, reliability, security, and scalability. It improves the overall network’s productivity and efficiency. It becomes easier for administrators to allocate and distribute resources conveniently and ensure high and stable network performance.
+Storage Virtualization
+
+Storage virtualization is the process of pooling physical storage of multiple network storage devices so it looks like a single storage device. Storage virtualization facilitates archiving, easy backup, and recovery tasks. It helps administrators allocate, move, change and set up resources efficiently across the organizational infrastructure.
+Why Do Organizations Use Virtualization Software?
+
+Virtualization software, also known as hypervisors, helps organizations simulate hardware functionality and create multiple virtual computer systems. This helps IT teams use multiple applications and operating systems on a single server. Organizations use virtualization software to efficiently manage and allocate resources to virtual machines. When using virtual machines, if one of them crashes, it has no effect on the physical hardware or other virtual machines.
+
+
+what is a container
+
+
+A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.
+
+
+Question2b?
+
+what is a container
+
+ container is a virtual runtime environment that runs on top of a single operating system (OS) kernel and emulates an operating system rather than the underlying hardware
+  
+  application container
+  
+  An application container is a relatively new container type. It is an application, service, or even microservice centric solution that usually runs just a single process inside. As a result, application containers promote creating immutable and ephemeral infrastructure.
+  
+  
+  system  container
+  
+A system container (also known as operating system container) is the oldest container type. It is an operating system (OS) centric solution that behaves like a standalone system, which does not require specialized software or custom images such as Docker.
+
+
+question 2c?
+
+
+Ultimately, containers are a feature of Linux. Containers have been a part of the Linux operating system for more than a decade, and go back even further in UNIX. That's why, despite the very recent introduction of Windows containers, the majority of containers we see are in fact Linux containers.
+ 
+ 
+ 
+ 
+ Can you list container technology and their use?
+ 
+ 
+ Containers let you freeze and restart an exact copy of a system that you plan to deploy, including the operating system and configuration files. This makes debugging easy and testing a snap, and it even changes the way that deploys and rollbacks happen in IT operations.
+
+Container packages are not only complete, but they are also small and efficient enough to download and run in seconds. Cluster managers provide the load balancing and scale to ensure uptime even during a rollout.
+
+Once you decide to use containers (or expand their use to a different area), you'll face a new challenge. The very growth and expansion in container technology brings a large set of choices, including which standards to use, how to store the old versions and deploy new images, and how to manage containers in production.
+
+So how do you assemble the right mix of products and services to build, run, and manage containers efficiently? To answer that question, TechBeacon reviewed a range of container technologies, from architecture to cluster management, storage, security, and even training and support. Here are the essential tools every team should consider.
+Container runtimes
+
+Docker was the first major open-source container offering, and quickly emerged as a de facto standard. Now Kubernetes is evolving as the new standard for clusters and cluster management.
+
+Kubernetes initially supported Docker and rkt (or "rocket") through custom code. But now, with the creation of the Container Runtime Interface (CRI), you have many ways to store virtual machines and at the same time communicate through that interface.
+Docker
+
+The first and still most popular container technology, Docker's open-source containerization engine works with most of the products that follow, as well as many open-source tools.
+Docker Enterprise
+
+This set of extensions not only adds features to Docker, but also makes it possible for Docker (the company) to add commercial support. If you need a support matrix to know exactly which versions of what software are supported—and a phone number to call if things go wrong—then Docker Enterprise might be for you.
+CRI-O
+
+The first implementation of the Container Runtime Interface, CRI-O is an incredibly lightweight, open-source reference implementation.
+rktlet
+
+The aforementioned rkt, redesigned and retooled to use the CRI as rktlet, now has a set of supported tools and community to rival Docker.
+containerd
+
+A project of the Cloud Native Computing Foundation, containerd was an early container format. More recently the developers of containerd built a CRI plugin that lets Kubernetes run containerd in the same way it runs rktlet or CRI-O.
+Microsoft Containers
+
+Positioned as an alternative to Linux, Microsoft Containers can support Windows containers under very specific circumstances. They generally run in a true virtual machine and not in a cluster manager like Kubernetes.
+Cluster management and deployment
+
+Once the team can create images and pass them around in development, comes the hard part: running and supporting containers in production. That means registering artifacts, deploying them to production as a system, and managing servers and collections of servers. The latter includes a collection of servers in the cloud, known as a "cluster." 
+
+Cluster management tools manage workloads, including moving instances from one virtual host to another based on load, and allocate resources such as CPU and memory.
+Kubernetes
+
+While there is no standard for cluster management, the Kubernetes open-source cluster manager, originally developed by Google, is far and away the most popular. Supported by Amazon's AWS, Google's Cloud Engine (GCE) and Microsoft's Azure Container service, Kubernetes is relatively portable, which helps prevent vendor lock-in.
+
+Kubernetes can even run on a private cloud: OpenStack. Microsoft, Amazon, and Google all provide container services that run Kubernetes—with commercial support options available.
+Istio and Envoy
+
+Where Kubernetes provides load balancing and scalability, by default it assumes that the same service will run the same version number and that all services can talk to one another. Kubernetes does not provide the tools to debug services that call services—sometimes called "observability."
+
+Envoy and Istio are open-source service mesh technologies that add a layer to provide security and observability. They can encrypt traffic inside of the cluster while observing it. Developed by Lyft, Envoy was the first service mesh for Kubernetes. Istio includes Envoy, sits on top of it, and adds several plugins, dashboards, and other features to extend it. 
+Apache Mesos
+
+A tool for abstracting computing resources, Apache Mesos can run both Docker and rkt images side by side in the same cluster. DC/OS is a platform built on Mesos that functions as a data center operating system.
+Docker Swarm
+
+Docker's free product for cluster management, Swarm runs from the command line and comes bundled with Docker 1.12 and higher. Swarm does not support autoscaling or load balancing natively, but third-party extensions provide this functionality.
+Docker Datacenter
+
+More than just a commercial alternative to Kubernetes, Docker Datacenter is designed as a drop-in replacement that lets you containerize your entire data center, and it includes commercial support. The tool has LDAP integration and a web-based dashboard with control panel, registry, monitoring, logging, and continuous integration.
+
+Of course, Docker Datacenter embraces and extends Docker's free, open-source products: Docker and Swarm. The tool adds the load balancing and scaling that Swarm is missing. And, of course, it works with Docker Enterprise.
+Storage containers
+
+Containers are designed to be interchangeable, like currency. That works exceptionally well for web services and microservices that can scale on demand. Storage and databases, on the other hand, need persistent locations to house data, or at least a standard interface layer. Organizations that want to move to an all-container infrastructure need storage, and companies now meet that demand.
+BlockBridge
+
+BlockBridge, the "elastic storage platform" company, offers storage as a container using Docker, with support for Kubernetes, OpenStack, and software-defined secure storage.
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+

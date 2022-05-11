@@ -1,0 +1,36 @@
+command to use 
+
+
+Check Virtualization Support on Ubuntu 20.04
+
+1. Before you begin with installing KVM, check if your CPU supports hardware virtualization:
+
+egrep -c '(vmx|svm)' /proc/cpuinfo
+result must be other then 0
+
+sudo kvm-ok
+sudo apt install cpu-checker
+restart terminal
+
+sudo apt-update
+sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo adduser ‘username’ libvirt
+sudo adduser ‘[username]’ kvm
+verifier
+virsh list --all
+sudo systemctl status libvirtd
+q to quit
+sudo apt install virt-manager
+virtual machine handling
+sudo systemctl stop libvirtd(arrete tout)
+sudo systemctl status libvirtd(etat)
+sudo systemctl start libvirtd(demarre)
+sudo systemctl enable libvirtd   (permettre au demarrrage)
+
+troobleshoot
+
+systemctl is-active xendomains
+
+sudo systemctl stop xendomains
+sudo systemctl disable xendomains
+sudo systemctl start libvirtd
